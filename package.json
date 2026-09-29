@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/free-port.mjs 3000",
+    "predev": "node src/scripts/free-port.mjs 3000",
     "dev": "next dev -p 3000",
     "build": "next build",
-    "prestart": "node scripts/free-port.mjs 3000",
+    "prestart": "node src/scripts/free-port.mjs 3000",
     "start": "next start -p 3000",
     "lint": "next lint"
   },

@@ -71,21 +71,23 @@ that is the intended graceful degradation, not a build failure.
 ## Architecture
 
 ```
-app/
-  (public)/      marketing, search and business profiles  — server-rendered for SEO
-  (auth)/        login and register
-  dashboard/
-    customer/    bookings, favourites, wallet, messages, profile
-    owner/       overview, business, services, staff, calendar, waitlist,
+src/
+  app/
+    (public)/    marketing, search and business profiles  — server-rendered for SEO
+    (auth)/      login and register
+    dashboard/
+      customer/  bookings, favourites, wallet, messages, profile
+      owner/     overview, business, services, staff, calendar, waitlist,
                  reviews, promotions, messages, analytics
-    staff/       today, calendar, profile
-    admin/       overview, businesses, users, disputes, fraud, promotions
-components/
-  Public/        presentational + shared widgets (BookingWidget, WaitlistJoin, …)
-  Dashboard/     per-role feature components
-  Auth/          AuthProvider, AuthGuard
-hooks/           one React Query module per backend resource
-lib/             axios instance, endpoint map, constants, utils, serverApi
+      staff/     today, calendar, profile
+      admin/     overview, businesses, users, disputes, fraud, promotions
+  components/
+    Public/        presentational + shared widgets (BookingWidget, WaitlistJoin, …)
+    Dashboard/     per-role feature components
+    Auth/          AuthProvider, AuthGuard
+  hooks/           one React Query module per backend resource
+  lib/             axios instance, endpoint map, constants, utils, serverApi
+  scripts/         dev/build helper scripts
 ```
 
 ### Data fetching
